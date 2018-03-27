@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/dataTables.bootstrap.min.css" rel="stylesheet" />
+    @RenderSection("Meta", false)
+</head>
+<body>
+    <div class="container-fluid nav navbar">
+        <div class="row jumbotron text-center danger" style="display:block">
+            <h1 class="h1 panel-primary">@ViewBag.Title</h1>
+        </div>
+        @RenderBody()
+    </div>
+    <center>
+        <div class="panel-footer">
+            <footer class="modal-footer">
+                <label class="h5">  <a class="btn-link" href="https://endpoint-labs.com/iletisim.html">Copyright © 2016 EndPoint Labs</a></label>
+            </footer>
+        </div>
+    </center>
+    
+        
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+
+</html>

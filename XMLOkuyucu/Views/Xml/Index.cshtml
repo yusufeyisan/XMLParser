@@ -1,0 +1,86 @@
+﻿
+@{
+    ViewBag.Title = "Dosya Yükleme";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+@using XMLOkuyucu.Models
+
+<div class="container">
+    <form class="form-group media-middle" action="/Xml/XmlYaz" method="post" enctype="multipart/form-data">
+        <center>
+            <hr class="text-primary" />
+            <div class="row">
+                <div class="row col-xs-10 col-xs-offset-1 col-sm-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <span class="btn btn-primary" onclick="$(this).parent().find('input[type=file]').click();">Dosya Seç</span>
+                            <input onchange="$(this).parent().parent().find('.form-control').html($(this).val().split(/[\\|/]/).pop());" name="XmlGelen" accept="text/*" class="col-lg-6" style="display: none;" type="file">
+                        </span><span class="form-control"></span>
+                    </div><hr />
+                    <input class="btn btn-success btn-file col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4" style="float:left" type="submit" id="btnUpload" value="Dosyayı Oku" />
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <label class="label label-danger">@TempData["HataliXml"]@TempData["HataliUzanti"]@TempData["HataliSecim"]</label>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </form>
+</div>
+<div class="container">
+    
+        <table class="table table-condensed table-bordered col-lg-12 col-md-12 col-sm-12 col-xs-11 text-center">
+            <thead>
+                <tr>
+                    <th class="text-center" colspan="3">Yüklenmiş Xml Dosyalar</th>
+                </tr>
+                <tr>
+                    <td colspan="3" class="text-center"><label class="label label-@TempData["LabelRenk"]">@TempData["XmlSilme"]</label ></td>
+                </tr>
+            </thead>
+            <thead>
+                <tr class="danger text-center">
+                    <th>No</th>
+                    <th>Adı</th>
+                    <th>Sil</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                @{
+                    int Sayac = 0;
+                    try
+                    {
+                        foreach (XmlYuklenenler Y in ViewBag.XmlEskiDosya)
+                        {
+                            Sayac = Sayac + 1;
+
+                            <tr>
+                                <td><span class="label control-label label-default text-center center-block" style="height:100%">@Sayac</span></td>
+                                <td><a href="/Xml/XmlEskiYaz/@Sayac"><span class="label control-label label-primary text-center center-block" style="height:100%">@Y.XmlYuklenen</span></a></td>
+                                <td><a href="/Xml/XmlSil/@Sayac"><span class="label control-label label-danger text-center center-block" style="height:100%">Sil</span></a></td>
+
+                            </tr>
+
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        <tr>
+                            <td colspan="3"> Henüz İçerik Yok</td>
+
+                        </tr>
+                    }
+
+                }
+
+            </tbody>
+
+        </table>
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <label class="label label-danger">@TempData["Hata"]</label>
+    </div>
+</div>
+
