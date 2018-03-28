@@ -1,61 +1,61 @@
-<pre style="background:#042029;color:#839496">[XmlRoot(<span style="color:#269186"><span style="color:#269186">"</span>CxXMLResults<span style="color:#269186">"</span></span>)]
-    public class CxXMLResults
+<pre style="background:#042029;color:#839496">[XmlRoot(<span style="color:#269186"><span style="color:#c60000">"</span>CxXMLResults<span style="color:#c60000">"</span></span>)]
+    <span style="color:#859900">public</span> <span style="color:#738a05">class</span> <span style="color:#268bd2">CxXMLResults</span>
     {
-        [<span style="color:#536871">XmlElement</span>("Query")]
-        public List&lt;Query> Query { get; set; }
+        [XmlElement(<span style="color:#269186"><span style="color:#c60000">"</span>Query<span style="color:#c60000">"</span></span>)]
+        <span style="color:#859900">public</span> <span style="color:#859900">List</span>&lt;Query> Query { <span style="color:#268bd2">get</span>; <span style="color:#268bd2">set</span>; }
 
     }
 
-    public class Query
+    <span style="color:#859900">public</span> <span style="color:#738a05">class</span> <span style="color:#268bd2">Query</span>
     {
-        [<span style="color:#536871">XmlElement</span>("Result")]
-        public List&lt;Result> Result { get; set; }
-        [<span style="color:#536871">XmlAttribute</span>("name")]
-        public string Name { get; set; }
+        [XmlElement(<span style="color:#269186"><span style="color:#c60000">"</span>Result<span style="color:#c60000">"</span></span>)]
+        <span style="color:#859900">public</span> <span style="color:#859900">List</span>&lt;Result> Result { <span style="color:#268bd2">get</span>; <span style="color:#268bd2">set</span>; }
+        [XmlAttribute(<span style="color:#269186"><span style="color:#c60000">"</span>name<span style="color:#c60000">"</span></span>)]
+        <span style="color:#859900">public</span> string Name { <span style="color:#268bd2">get</span>; <span style="color:#268bd2">set</span>; }
     }
 
-    public class Result
+    <span style="color:#859900">public</span> <span style="color:#738a05">class</span> <span style="color:#268bd2">Result</span>
     {
-        [<span style="color:#536871">XmlElement</span>("Path")]
-        public Path Path { get; set; }
+        [XmlElement(<span style="color:#269186"><span style="color:#c60000">"</span>Path<span style="color:#c60000">"</span></span>)]
+        <span style="color:#859900">public</span> Path Path { <span style="color:#268bd2">get</span>; <span style="color:#268bd2">set</span>; }
     }
 
-    public class Path
+    <span style="color:#859900">public</span> <span style="color:#738a05">class</span> <span style="color:#268bd2">Path</span>
     {
-        [<span style="color:#536871">XmlElement</span>("PathNode")]
-        public List&lt;PathNode> PathNode { get; set; }
+        [XmlElement(<span style="color:#269186"><span style="color:#c60000">"</span>PathNode<span style="color:#c60000">"</span></span>)]
+        <span style="color:#859900">public</span> <span style="color:#859900">List</span>&lt;PathNode> PathNode { <span style="color:#268bd2">get</span>; <span style="color:#268bd2">set</span>; }
     }
 
-    public class PathNode
+    <span style="color:#859900">public</span> <span style="color:#738a05">class</span> <span style="color:#268bd2">PathNode</span>
     {
-        [<span style="color:#536871">XmlElement</span>("FileName")]
-        public string FileName { get; set; }
+        [XmlElement(<span style="color:#269186"><span style="color:#c60000">"</span>FileName<span style="color:#c60000">"</span></span>)]
+        <span style="color:#859900">public</span> string FileName { <span style="color:#268bd2">get</span>; <span style="color:#268bd2">set</span>; }
 
-        [<span style="color:#536871">XmlElement</span>("Line")]
-        public int Line { get; set; }
+        [XmlElement(<span style="color:#269186"><span style="color:#c60000">"</span>Line<span style="color:#c60000">"</span></span>)]
+        <span style="color:#859900">public</span> <span style="color:#268bd2">int</span> Line { <span style="color:#268bd2">get</span>; <span style="color:#268bd2">set</span>; }
 
-        [<span style="color:#536871">XmlElement</span>("Column")]
-        public int Column { get; set; }
+        [XmlElement(<span style="color:#269186"><span style="color:#c60000">"</span>Column<span style="color:#c60000">"</span></span>)]
+        <span style="color:#859900">public</span> <span style="color:#268bd2">int</span> Column { <span style="color:#268bd2">get</span>; <span style="color:#268bd2">set</span>; }
 
-        [<span style="color:#536871">XmlElement</span>("Snippet")]
-        public Snippet Snippet { get; set; }
+        [XmlElement(<span style="color:#269186"><span style="color:#c60000">"</span>Snippet<span style="color:#c60000">"</span></span>)]
+        <span style="color:#859900">public</span> Snippet Snippet { <span style="color:#268bd2">get</span>; <span style="color:#268bd2">set</span>; }
     }
 
-    public class Snippet
+    <span style="color:#859900">public</span> <span style="color:#738a05">class</span> <span style="color:#268bd2">Snippet</span>
     {
-        [<span style="color:#536871">XmlElement</span>("Line")]
-        public Line Line { get; set; }
+        [XmlElement(<span style="color:#269186"><span style="color:#c60000">"</span>Line<span style="color:#c60000">"</span></span>)]
+        <span style="color:#859900">public</span> Line Line { <span style="color:#268bd2">get</span>; <span style="color:#268bd2">set</span>; }
     }
 
-    public class Line
+    <span style="color:#859900">public</span> <span style="color:#738a05">class</span> <span style="color:#268bd2">Line</span>
     {
-        [<span style="color:#536871">XmlElement</span>("Code")]
-        public string Code { get; set; }
+        [XmlElement(<span style="color:#269186"><span style="color:#c60000">"</span>Code<span style="color:#c60000">"</span></span>)]
+        <span style="color:#859900">public</span> string Code { <span style="color:#268bd2">get</span>; <span style="color:#268bd2">set</span>; }
     }
 
-    public class XmlYuklenenler
+    <span style="color:#859900">public</span> <span style="color:#738a05">class</span> <span style="color:#268bd2">XmlYuklenenler</span>
     {
-        public string XmlYuklenen { get; set; }
+        <span style="color:#859900">public</span> string XmlYuklenen { <span style="color:#268bd2">get</span>; <span style="color:#268bd2">set</span>; }
     }
 
 
