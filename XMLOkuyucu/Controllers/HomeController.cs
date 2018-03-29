@@ -99,5 +99,10 @@ namespace XMLOkuyucu.Controllers
                 ViewBag.Durum = "Boş veya yeterrsiz uzunlukta! (en az 6 karakter)";
             }
         }
+
+        private void isLoginSuccess(){
+            txtUserId = getRequestString("UserId");
+            txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;
+        }
     }
 }
