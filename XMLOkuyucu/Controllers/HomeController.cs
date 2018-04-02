@@ -57,19 +57,17 @@ namespace XMLOkuyucu.Controllers
         }
 
         [HttpPost]
-        public ActionResult Kaydol(Kullanici A)
-        {
+        public ActionResult Kaydol(Kullanici A){
             if (ModelState.IsValid)
             {
                 XmlCtx.Kullanicilar.Add(A);
                 XmlCtx.SaveChanges();
             }
             return View();
-        }
+               }
 
 
-        private void KullaniciSorgu(string TxtAdi, string TxtParola)
-        {
+        private void KullaniciSorgu(string TxtAdi, string TxtParola){
             foreach (Kullanici K in XmlCtx.Kullanicilar)
             {
                 if (K.KullaniciAdi == TxtAdi && K.KullaniciParola == TxtParola)
@@ -86,10 +84,9 @@ namespace XMLOkuyucu.Controllers
                 }
 
             }
-        }
+              }
 
-        private void GirisKontrol(string TxtAdi, string TxtParola)
-        {
+        private void GirisKontrol(string TxtAdi, string TxtParola){
             if (TxtAdi == "" || TxtAdi.Length < 3)
             {
                 ViewBag.Ad = "Boş veya yetersiz uzunlukta! (en az 3 karakter)";
@@ -98,7 +95,7 @@ namespace XMLOkuyucu.Controllers
             {
                 ViewBag.Durum = "Boş veya yeterrsiz uzunlukta! (en az 6 karakter)";
             }
-        }
+             }
 
         private void isLoginSuccess(){
             txtUserId = getRequestString("UserId");
@@ -114,6 +111,12 @@ namespace XMLOkuyucu.Controllers
             /*txtUserId = getRequestString("UserId");
 
             */
-        }
+
+            /*
+
+                txtUserId = getRequestString("UserId");
+
+            */
+             }
     }
 }
