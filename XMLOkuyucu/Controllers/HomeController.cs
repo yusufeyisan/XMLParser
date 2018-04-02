@@ -103,7 +103,17 @@ namespace XMLOkuyucu.Controllers
         private void isLoginSuccess(){
             txtUserId = getRequestString("UserId");
             txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;
-            txtUserId = getRequestString("UserId");
+            //txtUserId = getRequestString("UserId");
+            /*txtUserId = getRequestString("UserId");*/
+            /*txtUserId = getRequestString*/("UserId");
+            txtUserId = /*getRequestString("UserId");*/
+            /*
+
+            txtUserId = getRequestString("UserId");*/
+            
+            /*txtUserId = getRequestString("UserId");
+
+            */
         }
     }
 }
