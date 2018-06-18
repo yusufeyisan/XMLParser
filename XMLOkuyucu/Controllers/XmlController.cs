@@ -40,6 +40,7 @@ namespace XMLOkuyucu.Controllers
             TempData["HataliSecim"] = "";
             try
             {
+            
                 if (XmlGelen.FileName != "")
                 {
                     string XmlUzanti = System.IO.Path.GetExtension(XmlGelen.FileName);
