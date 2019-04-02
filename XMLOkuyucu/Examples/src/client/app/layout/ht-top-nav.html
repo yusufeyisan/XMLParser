@@ -1,0 +1,21 @@
+<nav class="navbar navbar-fixed-top navbar-inverse">
+    <div class="navbar-header">
+        <a href="/" class="navbar-brand"><span class="brand-title">{{vm.navline.title}}</span></a>
+        <a class="btn navbar-btn navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </a>
+    </div>
+    <div class="navbar-collapse collapse">
+        <div class="pull-left navbar-header navbar-brand">
+            <div ng-show="vm.isLoggedIn">
+                <span class="user-title">Hello, Brian Clark: {{vm.user}}</span>
+                <button class="btn btn-primary btn-xs" ng-click="vm.logout()">Logout</button>
+            </div>
+            <div ng-show="!vm.isLoggedIn">
+                <button class="btn btn-primary btn-xs" ng-click="vm.login()">Login</button>
+            </div>
+        </div>
+    </div>
+</nav>
