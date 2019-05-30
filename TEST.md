@@ -45,7 +45,7 @@
     <span style="color:#859900">public</span> <span style="color:#738a05">class</span> <span style="color:#268bd2">Snippet</span>
     {
         [XmlElement(<span style="color:#269186"><span style="color:#c60000">"</span>Line<span style="color:#c60000">"</span></span>)]
-        <span style="color:#859900">public</span> Line Line { <span style="color:#268bd2">get</span>; <span style="color:#268bd2">set</span>; }
+        <span style="color:#859900">public</span> Line Line { <span style="color:#268bd2">get</span>; <span style="color:#268bd2">set</span>; G}
     }
 
     <span style="color:#859900">public</span> <span style="color:#738a05">class</span> <span style="color:#268bd2">Line</span>
@@ -61,3 +61,5 @@
 
 
 </pre>
+
+hoppicik
